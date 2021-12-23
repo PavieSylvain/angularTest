@@ -1,0 +1,22 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+    <label for="text">Text engraving: </label>
+    <input id="text" type="text" formControlName="text">
+  
+    <br>
+
+    <label for="color">Color: </label>
+    <select id="color" formControlName="color">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Yellow</option>
+    </select>
+  
+    <br>
+
+    <label for="size">Size: </label>
+    <input id="size" type="number" formControlName="size">
+
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+  </form>
+  
